@@ -1,0 +1,45 @@
+employee_number,name,title,team,manager,location,kind,start_date,end_date,pay_amount,pay_per,pay_effective
+e-0001,Matt Keller,Chief executive and co-founder,Leadership,,NY,employee,2021-03-01,,188500.00,year,2026-04-01
+e-0002,Laura Chen,Chief technology officer and co-founder,Platform,e-0001,CO,employee,2021-03-01,,196000.00,year,2026-04-01
+e-0003,Ruth Callahan,Finance lead,Operations,e-0001,NY,employee,2022-01-10,,154700.00,year,2026-04-01
+e-0004,Dana Morris,Head of people and operations,Operations,e-0001,IL,employee,2022-04-04,,150500.00,year,2025-04-01
+e-0005,Sam Patel,Staff engineer,Platform,e-0002,CO,employee,2021-06-14,,215250.00,year,2026-04-01
+e-0006,Colleen Byrne,Engineering manager,Clinic App,e-0002,WA,employee,2021-09-07,,195500.00,year,2026-04-01
+e-0007,Kevin Liu,Senior engineer,Clinic App,e-0006,CA,employee,2021-11-01,,190500.00,year,2026-04-01
+e-0008,Maria Lopez,Head of customer,Customer,e-0001,TX,employee,2021-10-18,,154000.00,year,2026-04-01
+e-0009,Jake Peterson,Product designer,Design,e-0012,NY,employee,2022-02-14,,138500.00,year,2026-04-01
+e-0010,Kyle Miller,Senior engineer,Platform,e-0002,TX,employee,2022-03-21,,168250.00,year,2026-01-01
+e-0011,Brooke Sullivan,Head of sales,Sales,e-0001,CA,employee,2022-05-02,,164800.00,year,2026-04-01
+e-0012,Lisa Nguyen,Head of product and design,Design,e-0001,NY,employee,2022-06-06,,183000.00,year,2026-04-01
+e-0013,Josh Miller,Engineer,Clinic App,e-0006,NC,employee,2022-07-11,,159190.00,year,2026-04-01
+e-0014,Hannah Kim,Support specialist,Customer,e-0008,TX,employee,2022-08-01,,74000.00,year,2026-04-01
+e-0015,Jorge Ramirez,Account executive,Sales,e-0011,CA,employee,2022-09-12,,99500.00,year,2026-04-01
+e-0016,Priya Shah,Marketing lead,Marketing,e-0001,IL,employee,2022-10-03,,137000.00,year,2025-04-01
+e-0018,Rachel Stein,Onboarding specialist,Customer,e-0008,NY,employee,2023-01-09,,77600.00,year,2026-04-01
+e-0019,Mike Johnson,Staff engineer,Clinic App,e-0006,NC,employee,2023-02-06,,202500.00,year,2026-08-01
+e-0020,Abby Thompson,Account executive,Sales,e-0011,TX,employee,2023-03-13,,96800.00,year,2026-04-01
+e-0021,Tiago Santos,Contract engineer,Clinic App,e-0006,Portugal,contractor,2023-04-03,,8600.00,month,2026-06-01
+e-0022,Emily Kim,Data analyst,Operations,e-0003,NY,employee,2023-05-01,,118100.00,year,2026-04-01
+e-0023,Dan Walsh,Engineer,Platform,e-0002,CO,employee,2023-06-05,,159400.00,year,2026-04-01
+e-0024,Grace Taylor,Support specialist,Customer,e-0008,NC,employee,2023-07-10,,77500.00,year,2026-08-16
+e-0025,Luis Garcia,Sales development rep,Sales,e-0011,TX,employee,2023-08-14,,68500.00,year,2026-04-01
+e-0026,Natalie Brooks,Content marketer,Marketing,e-0016,CA,employee,2023-09-05,,94710.00,year,2025-04-01
+e-0027,Valentina Ruiz,Contract QA engineer,Clinic App,e-0006,Argentina,contractor,2023-10-02,,5900.00,month,2026-08-01
+e-0029,Sarah Johnson,Product designer,Design,e-0012,IL,employee,2024-01-08,,135350.00,year,2025-04-01
+e-0030,Ethan Clark,Solutions engineer,Sales,e-0011,CO,employee,2024-02-05,,154500.00,year,2026-04-01
+e-0031,Joy Bautista,Contract support specialist,Customer,e-0008,Philippines,contractor,2024-03-04,,2900.00,month,2026-03-01
+e-0032,Caleb Dunn,Engineer,Platform,e-0002,NY,employee,2024-04-15,,150500.00,year,2025-04-01
+e-0033,Leah Martin,Onboarding specialist,Customer,e-0008,IL,employee,2024-05-06,,80000.00,year,2026-04-01
+e-0034,Arjun Patel,Engineer,Clinic App,e-0006,CA,employee,2024-06-03,,157500.00,year,2026-04-01
+e-0035,Molly Ryan,Account executive,Sales,e-0011,NY,employee,2024-08-05,,101960.00,year,2026-04-01
+e-0036,Alex Rivera,Product manager,Design,e-0012,TX,employee,2024-09-09,,163000.00,year,2026-04-01
+e-0037,Zoe Anderson,Lifecycle marketer,Marketing,e-0016,WA,employee,2024-11-04,,99500.00,year,2026-04-01
+e-0039,Nadia Hassan,Engineer,Platform,e-0002,IL,employee,2025-02-03,,158550.00,year,2026-04-01
+e-0041,Ashley Davis,Engineer,Clinic App,e-0006,NC,employee,2025-05-05,,157080.00,year,2026-04-01
+e-0042,Connor Walsh,Sales development rep,Sales,e-0011,NY,employee,2025-06-09,2026-08-21,65800.00,year,2025-06-09
+e-0044,Megan Cole,Senior engineer,Platform,e-0002,WA,employee,2025-11-03,,175000.00,year,2025-11-03
+e-0045,Andre Wilson,Customer success manager,Customer,e-0008,TX,employee,2026-01-12,,101000.00,year,2026-01-12
+e-0046,Jenny Park,Product designer,Design,e-0012,CA,employee,2026-03-02,,134900.00,year,2026-03-02
+e-0047,Ryan Lee,Engineer,Clinic App,e-0006,NC,employee,2026-05-04,,154850.00,year,2026-05-04
+e-0048,Keisha Moore,Support specialist,Customer,e-0008,IL,employee,2026-08-10,,70500.00,year,2026-08-10
+e-0049,Daniel Reyes,Account executive,Sales,e-0011,TX,employee,2026-08-24,,98000.00,year,2026-08-24

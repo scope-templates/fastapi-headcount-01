@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}Cost {{ report.month }}{% endblock %}
+{% block body %}
+<h1>Cost for {{ report.month }}</h1>
+<p>Headcount at month end {{ report.headcount }}; total {{ report.total_cents | dollars }}.</p>
+<table>
+  <tr><th>Team</th><th>Headcount</th><th>Cost</th></tr>
+  {% for team in report.teams %}
+  <tr><td>{{ team.team }}</td><td class="num">{{ team.headcount }}</td><td class="num">{{ team.cost_cents | dollars }}</td></tr>
+  {% endfor %}
+</table>
+<h2>By person</h2>
+<table>
+  <tr><th>Name</th><th>Team</th><th>Cost</th></tr>
+  {% for line in report.people %}
+  <tr><td>{{ line.name }}</td><td>{{ line.team }}</td><td class="num">{{ line.cost_cents | dollars }}</td></tr>
+  {% endfor %}
+</table>
+<p class="muted">Each day is costed at the rate in effect on that day.</p>
+{% endblock %}

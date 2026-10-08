@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Headcount{% endblock %}
+{% block body %}
+<h1>Headcount on {{ report.day }}: {{ report.headcount }}</h1>
+<table>
+  <tr><th>Team</th><th>Employees</th><th>Contractors</th></tr>
+  {% for team in report.teams %}
+  <tr><td>{{ team.team }}</td><td class="num">{{ team.employee }}</td><td class="num">{{ team.contractor }}</td></tr>
+  {% endfor %}
+</table>
+<h2>By location</h2>
+<table>
+  {% for place, count in report.locations.items() %}
+  <tr><td>{{ place }}</td><td class="num">{{ count }}</td></tr>
+  {% endfor %}
+</table>
+<h2>People</h2>
+<table>
+  <tr><th>Name</th><th>Title</th><th>Team</th><th>Location</th><th>Start</th><th>Status</th></tr>
+  {% for p in people %}
+  <tr><td>{{ p.name }}</td><td>{{ p.title }}</td><td>{{ p.team }}</td><td>{{ p.location }}</td><td>{{ p.start_date }}</td><td>{{ p.status }}</td></tr>
+  {% endfor %}
+</table>
+{% endblock %}

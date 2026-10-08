@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}Book time off{% endblock %}
+{% block body %}
+<h1>Book time off</h1>
+<form id="time-off">
+  <p><label>Person
+    <select name="person_id">
+      {% for p in people %}<option value="{{ p.id }}">{{ p.name }} ({{ p.team }})</option>{% endfor %}
+    </select></label></p>
+  <p><label>Kind
+    <select name="kind">{% for k in kinds %}<option>{{ k }}</option>{% endfor %}</select></label></p>
+  <p><label>First day <input type="date" name="first_day" required></label>
+     <label>Last day <input type="date" name="last_day" required></label></p>
+  <p><label>Note <input type="text" name="note" size="50"></label></p>
+  <p><button type="submit">Book</button> <span id="result" class="muted"></span></p>
+</form>
+<script>
+document.getElementById("time-off").addEventListener("submit", function (event) {
+  event.preventDefault();
+  var body = Object.fromEntries(new FormData(event.target).entries());
+  fetch("/time-off", {method: "POST", headers: {"Content-Type": "application/json"}, body: JSON.stringify(body)})
+    .then(function (response) { return response.json().then(function (data) { return [response.ok, data]; }); })
+    .then(function (pair) {
+      document.getElementById("result").textContent = pair[0]
+        ? "Booked " + pair[1].days + " weekdays."
+        : "Not booked: " + JSON.stringify(pair[1].detail);
+    });
+});
+</script>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Out {{ first }} to {{ last }}{% endblock %}
+{% block body %}
+<h1>Out {{ first }} to {{ last }}</h1>
+{% if rows %}
+<table>
+  <tr><th>Name</th><th>Team</th><th>Kind</th><th>From</th><th>To</th><th>Weekdays</th></tr>
+  {% for r in rows %}
+  <tr><td>{{ r.name }}</td><td>{{ r.team }}</td><td>{{ r.kind }}</td><td>{{ r.first_day }}</td><td>{{ r.last_day }}</td><td class="num">{{ r.days }}</td></tr>
+  {% endfor %}
+</table>
+{% else %}
+<p>Nobody you can see has time off booked for these days.</p>
+{% endif %}
+{% endblock %}

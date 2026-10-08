@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}Sign in{% endblock %}
+{% block body %}
+<h1>Sign in</h1>
+<form id="sign-in">
+  <p><label>Your token <input name="token" type="password" size="40" required></label>
+  <button type="submit">Continue</button> <span id="result" class="muted"></span></p>
+</form>
+<script>
+document.getElementById("sign-in").addEventListener("submit", function (event) {
+  event.preventDefault();
+  var token = new FormData(event.target).get("token");
+  fetch("/sign-in", {method: "POST", headers: {"Content-Type": "application/json"}, body: JSON.stringify({token: token})})
+    .then(function (response) {
+      if (response.ok) { window.location = "/pages/headcount"; return; }
+      return response.json().then(function (data) { document.getElementById("result").textContent = data.reason; });
+    });
+});
+</script>
+{% endblock %}

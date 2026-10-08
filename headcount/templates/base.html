@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>{% block title %}Headcount desk{% endblock %}</title>
+<style>
+  body { font-family: system-ui, sans-serif; margin: 2rem; color: #222; max-width: 960px; }
+  table { border-collapse: collapse; margin: 1rem 0; }
+  th, td { padding: .3rem .8rem; border-bottom: 1px solid #ddd; text-align: left; }
+  td.num { text-align: right; font-variant-numeric: tabular-nums; }
+  nav a { margin-right: 1rem; }
+  .muted { color: #666; font-size: .9rem; }
+</style>
+</head>
+<body>
+<nav>
+  <a href="/pages/headcount">Headcount</a>
+  {% if who and who.role in ("finance", "people") %}<a href="/pages/cost/{{ last_month }}">Cost</a>{% endif %}
+  <a href="/pages/out">Out next week</a>
+  {% if who and who.role in ("manager", "people") %}<a href="/time-off/new">Book time off</a>{% endif %}
+  {% if who %}<span class="muted">signed in as {{ who.label }} ({{ who.role }})</span>{% endif %}
+</nav>
+{% block body %}{% endblock %}
+{% if last_import %}
+<p class="muted">Last import: {{ last_import.file_name }}, {{ last_import.row_count }} rows, at {{ last_import.at }}.</p>
+{% endif %}
+</body>
+</html>
